@@ -7,7 +7,7 @@
 
 Submitted by: **Carly BAJA**
 
-Time spent: **X** hours spent in total
+Time spent: about 8 hours spent in total
 
 ## User Stories
 
