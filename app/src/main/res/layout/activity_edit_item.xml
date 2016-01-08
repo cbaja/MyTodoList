@@ -1,0 +1,71 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.codepath.mytodolist.EditItemActivity"
+    android:background="#ffd9dcbb">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/imageView"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignRight="@+id/btnCancel"
+        android:layout_alignEnd="@+id/btnCancel"
+        android:src="@drawable/home"
+        android:onClick="onCancel"
+        android:adjustViewBounds="false"
+        android:hint="Home"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etEditText"
+        android:text="@string/edit_items"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_x="3dp"
+        android:layout_y="59dp"
+        android:textColor="#ff000000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_items"
+        android:id="@+id/btnSave"
+        android:layout_marginTop="67dp"
+        android:onClick="onSave"
+        android:layout_below="@+id/etEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_x="106dp"
+        android:layout_y="137dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#fe030303"
+        android:hint="Save"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cancel"
+        android:id="@+id/btnCancel"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_toRightOf="@+id/btnSave"
+        android:layout_toEndOf="@+id/btnSave"
+        android:onClick="onCancel"
+        android:layout_x="205dp"
+        android:layout_y="137dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#fe030303"
+        android:hint="Cancel"/>
+
+
+</AbsoluteLayout>

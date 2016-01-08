@@ -1,0 +1,15 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.mytodolist.SplashScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ivMyTodoListSplashScreen"
+        android:layout_x="0dp"
+        android:layout_y="0dp"
+        android:src="@drawable/my_todo_list_splash_screen"
+        android:background="#f1ffc727" />
+
+</AbsoluteLayout>
