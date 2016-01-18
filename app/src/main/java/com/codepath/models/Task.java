@@ -24,21 +24,19 @@ public class Task extends Model {
     @Column(name = "Statu")
     public String statu;
 
-    @Column(name = "Notes")
-    public String notes;
 
-    public Task(String description,String duedate, String statu, String notes) {
+    public Task(String description,String duedate, String statu) {
         super();
         this.description = description;
         this.duedate = duedate;
         this.statu = statu;
-        this.notes = notes;
+     //   this.notes = notes;
     }
 
-    public Task(String description, String duedate) {
+    public Task(String description) {
         super();
         this.description = description;
-        this.duedate = duedate;
+     //   this.duedate = duedate;
      //   this.notes = notes;
     }
 

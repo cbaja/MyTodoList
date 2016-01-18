@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
 import com.codepath.adapters.TasksAdapter;
 import com.codepath.models.Task;
@@ -52,6 +53,8 @@ public class HomeActivity extends AppCompatActivity {
         // Load the result into the adapter using `addAll`
         adapter.addAll(queryResults);
 
+        listView.invalidateViews();
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -80,9 +83,10 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         //remove item at position
-                       // todoItems.remove(position);
+                       //  Task.remove(position);
                        // aTodoAdapter.notifyDataSetChanged();
                       //  writeItems();
+                        new Delete().from(Task.class).where("Name = ?", 1).execute();
 
                         dialog.dismiss();
                     }

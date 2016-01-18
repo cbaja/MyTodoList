@@ -16,7 +16,7 @@ import java.util.List;
 
 
 
-@Table(name = "Tasks")
+@Table(name = "Todo")
 public class Todo extends Model {
     // If name is omitted, then the field name is used.
     @Column(name = "Description",index = true)
@@ -36,11 +36,11 @@ public class Todo extends Model {
         this.duedate = duedate;
         this.statu = statu;    }
 
-    public Todo(String description, String statu) {
+    public Todo(String description, String duedate) {
         super();
         this.description = description;
-        // this.duedate = duedate;
-        this.statu = statu;
+         this.duedate = duedate;
+        //this.statu = statu;
     }
 
 

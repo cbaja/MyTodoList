@@ -89,13 +89,14 @@ public class AddItemActivity extends AppCompatActivity {
         String status = spinStatus.getSelectedItem().toString();
 
           //Creating instance to access Friend class
-         Task t = new Task(taskname,duedate);
+         Task t = new Task(taskname);
         //save function will insert the values in to database
          t.save();
 
         Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_LONG).show();
 
         finish();
+
     }
 
 
