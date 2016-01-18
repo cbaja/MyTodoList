@@ -52,7 +52,7 @@ public class SplashScreenActivity extends ActionBarActivity {
                 }, 1000);
 
 
-                Intent i = new Intent(SplashScreenActivity.this, MainActivity.class);
+                Intent i = new Intent(SplashScreenActivity.this, HomeActivity.class);
                startActivity(i);
 
             }

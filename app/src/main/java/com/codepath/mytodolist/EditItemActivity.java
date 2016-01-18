@@ -2,23 +2,39 @@ package com.codepath.mytodolist;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 
-public class EditItemActivity extends ActionBarActivity {
+public class EditItemActivity extends AppCompatActivity  {
 
     EditText etEditText;
+    EditText edtTaskName;
+    EditText edtDueDate;
+    Spinner spStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_item);
 
-        etEditText = (EditText)findViewById(R.id.etEditText);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_lettering);
+        getSupportActionBar().setDisplayUseLogoEnabled(true); // Display the logo
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // Enable the Up button
+        ActionBar actionBar = getSupportActionBar(); // or getActionBar();
+        getSupportActionBar().setTitle("Edit Task"); // set the top title
+        String title = actionBar.getTitle().toString();
+
+        edtTaskName = (EditText)findViewById(R.id.edtTaskName);
+        edtDueDate = (EditText)findViewById(R.id.edtDueDate);
+        spStatus = (Spinner)findViewById(R.id.spStatus);
+
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
 
@@ -30,11 +46,15 @@ public class EditItemActivity extends ActionBarActivity {
     }
 
     public void onSave(View v){
-        EditText etName = (EditText) findViewById(R.id.etEditText);
+        edtTaskName = (EditText)findViewById(R.id.edtTaskName);
+        edtDueDate = (EditText)findViewById(R.id.edtDueDate);
+        spStatus = (Spinner)findViewById(R.id.spStatus);
         // Prepare data intent
         Intent data = new Intent();
         // Pass relevant data back as a result
-        data.putExtra("name", etName.getText().toString());
+        data.putExtra("name", etEditText.getText().toString());
+        data.putExtra("name", edtTaskName.getText().toString());
+        data.putExtra("name", spStatus.getSelectedView().toString());
        // data.putExtra("code", 200); // ints work too
         // Activity finished ok, return the data
         setResult(RESULT_OK, data); // set result code and bundle data for response

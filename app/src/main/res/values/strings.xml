@@ -10,4 +10,16 @@
     <string name="edit_items">Edit items ....</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_add_item">AddItemActivity</string>
+    <string name="label_task_description">Task Name</string>
+    <string name="label_due_date">Due Date</string>
+    <string name="labe_status">Status</string>
+    <string name="field_task_description">Enter the task name ...</string>
+    <string name="btn_clear_data">CLEAR</string>
+    <string-array name="status_array">
+        <item>NOT STARTED</item>
+        <item>ON GOING</item>
+        <item>COMPLETED</item>
+    </string-array>
 </resources>

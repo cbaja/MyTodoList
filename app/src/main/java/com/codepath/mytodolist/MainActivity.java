@@ -15,6 +15,9 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.activeandroid.ActiveAndroid;
+import com.activeandroid.Configuration;
+
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
@@ -33,6 +36,9 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Configuration dbConfiguration = new Configuration.Builder(this).setDatabaseName("MyTodoList.db").create();
+        ActiveAndroid.initialize(dbConfiguration);
+
         setContentView(R.layout.activity_main);
         populateArrayItems();
         lvItems = (ListView) findViewById(R.id.lvItems);

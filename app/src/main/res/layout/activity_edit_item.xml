@@ -3,54 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.codepath.mytodolist.EditItemActivity"
-    android:background="#ffd9dcbb">
-
-    <ImageView
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:id="@+id/imageView"
-        android:layout_above="@+id/btnCancel"
-        android:layout_alignRight="@+id/btnCancel"
-        android:layout_alignEnd="@+id/btnCancel"
-        android:src="@drawable/home"
-        android:onClick="onCancel"
-        android:adjustViewBounds="false"
-        android:hint="Home"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/etEditText"
-        android:text="@string/edit_items"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_x="3dp"
-        android:layout_y="59dp"
-        android:textColor="#ff000000" />
+    tools:context="com.codepath.mytodolist.EditItemActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/save_items"
-        android:id="@+id/btnSave"
-        android:layout_marginTop="67dp"
-        android:onClick="onSave"
-        android:layout_below="@+id/etEditText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="83dp"
-        android:layout_marginStart="83dp"
-        android:layout_x="106dp"
-        android:layout_y="137dp"
-        android:background="@drawable/mybutton"
-        android:textColor="#fe030303"
-        android:hint="Save"/>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/save_items"
+    android:id="@+id/btnSave"
+    android:layout_marginTop="67dp"
+    android:onClick="onSave"
+    android:layout_below="@+id/etEditText"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginLeft="83dp"
+    android:layout_marginStart="83dp"
+    android:layout_x="95dp"
+    android:layout_y="271dp"
+    android:background="@drawable/mybutton"
+    android:textColor="#fe030303"
+    android:hint="Save"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -61,11 +32,64 @@
         android:layout_toRightOf="@+id/btnSave"
         android:layout_toEndOf="@+id/btnSave"
         android:onClick="onCancel"
-        android:layout_x="205dp"
-        android:layout_y="137dp"
+        android:layout_x="193dp"
+        android:layout_y="271dp"
         android:background="@drawable/mybutton"
         android:textColor="#fe030303"
         android:hint="Cancel"/>
+
+    <TextView
+        android:layout_width="83dp"
+        android:layout_height="27dp"
+        android:text="@string/label_task_description"
+        android:id="@+id/tvEdtTask"
+        android:layout_x="34dp"
+        android:layout_y="44dp" />
+
+    <EditText
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTaskName"
+        android:layout_x="140dp"
+        android:layout_y="33dp"
+        android:editable="true"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:hint="Enter Task Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_due_date"
+        android:id="@+id/tvEdtLabelDueDate"
+        android:layout_x="34dp"
+        android:layout_y="122dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labe_status"
+        android:id="@+id/tvEdtLabelStatus"
+        android:layout_x="34dp"
+        android:layout_y="192dp" />
+
+    <Spinner
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:id="@+id/spStatus"
+        android:layout_x="140dp"
+        android:layout_y="180dp"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDueDate"
+        android:layout_x="140dp"
+        android:layout_y="100dp"
+        android:editable="false"
+        android:inputType="date"
+        android:hint="mm/dd/yyyy" />
 
 
 </AbsoluteLayout>

@@ -1,0 +1,93 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codepath.mytodolist.AddItemActivity">
+
+
+    <TextView
+        android:layout_width="107dp"
+        android:layout_height="27dp"
+        android:text="@string/label_task_description"
+        android:id="@+id/tvTaskDescription"
+        android:layout_x="34dp"
+        android:layout_y="44dp" />
+
+    <EditText
+        android:layout_width="218dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTaskDescription"
+        android:layout_x="140dp"
+        android:layout_y="33dp"
+        android:editable="true"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:hint="Enter Task Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_due_date"
+        android:id="@+id/tvDueDate"
+        android:layout_x="34dp"
+        android:layout_y="122dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labe_status"
+        android:id="@+id/tvStatus"
+        android:layout_x="34dp"
+        android:layout_y="192dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_items"
+        android:id="@+id/btnSave"
+        android:layout_marginTop="67dp"
+        android:onClick="onSave"
+        android:layout_below="@+id/etEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="83dp"
+        android:layout_marginStart="83dp"
+        android:layout_x="104dp"
+        android:layout_y="260dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#fe030303"
+        android:hint="Save"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_clear_data"
+        android:id="@+id/btnCancel"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_toRightOf="@+id/btnSave"
+        android:layout_toEndOf="@+id/btnSave"
+        android:onClick="onCancel"
+        android:layout_x="196dp"
+        android:layout_y="260dp"
+        android:background="@drawable/mybutton"
+        android:textColor="#fe030303"
+        android:hint="Cancel"/>
+
+    <Spinner
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:id="@+id/spinner"
+        android:layout_x="140dp"
+        android:layout_y="180dp"
+        android:spinnerMode="dropdown" />
+
+    <EditText
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_x="140dp"
+        android:layout_y="100dp"
+        android:editable="false"
+        android:inputType="date"
+        android:hint="mm/dd/yyyy" />
+
+</AbsoluteLayout>
