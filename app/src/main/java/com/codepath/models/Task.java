@@ -5,7 +5,6 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,18 +18,25 @@ public class Task extends Model {
     public String description;
 
     @Column(name="Duedate")
-    public Date duedate;
+    public String duedate;
 
   //  @Column(name = "Statu", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
     @Column(name = "Statu")
     public String statu;
 
 
-    public Task(String description,Date duedate, String statu) {
+    public Task(String description,String duedate, String statu) {
         super();
         this.description = description;
         this.duedate = duedate;
         this.statu = statu;
+    }
+
+    public Task(String description) {
+        super();
+        this.description = description;
+       // this.duedate = duedate;
+      //  this.statu = statu;
     }
 
 

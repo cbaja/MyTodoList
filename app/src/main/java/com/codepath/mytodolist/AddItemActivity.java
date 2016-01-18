@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.codepath.models.Task;
 
@@ -33,7 +34,7 @@ public class AddItemActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("New Task"); // set the top title
         String title = actionBar.getTitle().toString();
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) findViewById(R.id.spinStatus);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.status_array, android.R.layout.simple_spinner_item);
@@ -70,7 +71,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         Date currentDate = new Date();
 
-        Task task = new Task();
+  /*      Task task = new Task();
 
  //       if (edtTaskName.getText().toString()!= null && edtTaskName.getText().toString().length()>0) {
 
@@ -78,9 +79,25 @@ public class AddItemActivity extends AppCompatActivity {
             task.duedate = currentDate;
             task.statu = spStatus.getSelectedItem().toString();
 
-            task.save();
+            task.save();*/
+        EditText etTaskDescription = (EditText)findViewById(R.id.etTaskDescription);
+        EditText etDueDate = (EditText) findViewById(R.id.etDueDate);
+        Spinner spinStatus = (Spinner)findViewById(R.id.spinStatus);
 
-           // aTodoAdapter.add(edtTaskName.getText().toString());
+        String taskname = etTaskDescription.getText().toString();
+        String duedate = etDueDate.getText().toString();
+        String status = spinStatus.getSelectedItem().toString();
+
+          //Creating instance to access Friend class
+         Task t = new Task(taskname,duedate,status);
+        //save function will insert the values in to database
+         t.save();
+
+        Toast.makeText(getApplicationContext(), "Saved successfully", Toast.LENGTH_SHORT).show();
+    }
+
+
+    // aTodoAdapter.add(edtTaskName.getText().toString());
            // etEditText.setText("");
            // writeItems();
    //     }
@@ -92,5 +109,5 @@ public class AddItemActivity extends AppCompatActivity {
         }
         */
 
-    }
+
 }
