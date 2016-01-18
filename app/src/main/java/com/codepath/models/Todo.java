@@ -1,3 +1,10 @@
+
+
+/**
+ * Created by carly.baja on 1/17/2016.
+ */
+
+
 package com.codepath.models;
 
 import com.activeandroid.Model;
@@ -7,12 +14,10 @@ import com.activeandroid.query.Select;
 
 import java.util.List;
 
-/**
- * Created by carly.baja on 1/9/2016.
- */
+
 
 @Table(name = "Tasks")
-public class Task extends Model {
+public class Todo extends Model {
     // If name is omitted, then the field name is used.
     @Column(name = "Description",index = true)
     public String description;
@@ -20,39 +25,36 @@ public class Task extends Model {
     @Column(name="Duedate")
     public String duedate;
 
-  //  @Column(name = "Statu", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
+    //  @Column(name = "Statu", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
     @Column(name = "Statu")
     public String statu;
 
-    @Column(name = "Notes")
-    public String notes;
 
-    public Task(String description,String duedate, String statu, String notes) {
+    public Todo(String description,String duedate, String statu) {
         super();
         this.description = description;
         this.duedate = duedate;
+        this.statu = statu;    }
+
+    public Todo(String description, String statu) {
+        super();
+        this.description = description;
+        // this.duedate = duedate;
         this.statu = statu;
-        this.notes = notes;
-    }
-
-    public Task(String description, String duedate) {
-        super();
-        this.description = description;
-        this.duedate = duedate;
-     //   this.notes = notes;
     }
 
 
-    public Task() {
+    public Todo() {
         super();
     }
 
-    public static List<Task> getAll() {
+    public static List<Todo> getAll() {
         // This is how you execute a query
         return new Select()
-                .from(Task.class)
+                .from(Todo.class)
                 .orderBy("Description ASC")
                 .execute();
     }
 
 }
+

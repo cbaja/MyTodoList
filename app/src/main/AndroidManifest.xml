@@ -14,10 +14,10 @@
             android:value="MyTodoList.db" />
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="5" />
+            android:value="6" />
         <meta-data
             android:name="AA_MODELS"
-            android:value="com.codepath.mytodolist.model.Task, com.codepath.mytodolist.model.Statu" />
+            android:value="com.codepath.mytodolist.model.Task, com.codepath.mytodolist.model.Todo, com.codepath.mytodolist.model.Statu" />
 
         <activity
             android:name=".MainActivity"
